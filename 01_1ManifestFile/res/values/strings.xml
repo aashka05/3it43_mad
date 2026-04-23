@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">01_1ManifestFile</string>
+    <string name="detonate_description">Detonate button</string>
+</resources>
