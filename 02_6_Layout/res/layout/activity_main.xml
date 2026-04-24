@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🔹 LinearLayout Section -->
+        <TextView
+            android:text="LinearLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:text="Orientation: vertical/horizontal, uses weight"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="1"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="2"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- 🔹 RelativeLayout Section -->
+        <TextView
+            android:text="RelativeLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Position views relative to each other"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:id="@+id/t1"
+                android:text="Top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Below"
+                android:layout_below="@id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ConstraintLayout"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flexible layout using constraints (top, bottom, start, end)"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <Button
+                android:text="Center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FrameLayout"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stacks views on top of each other"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:text="Bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TableLayout"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arranges views in rows and columns"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TableRow>
+                <Button android:text="1"/>
+                <Button android:text="2"/>
+                <Button android:text="3"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="A"/>
+                <TextView android:text="B"/>
+                <TextView android:text="C"/>
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GridLayout"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arranges views in grid format"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:rowCount="2"
+            android:columnCount="2">
+
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
